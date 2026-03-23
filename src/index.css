@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,55 +6,53 @@
 
 @layer base {
   :root {
-    /* Dark teal corporate palette */
-    --background: 185 35% 12%;
+    /* Dark slate/navy corporate palette - matching reference */
+    --background: 215 28% 14%;
     --foreground: 210 15% 85%;
 
-    --card: 185 30% 15%;
-    --card-foreground: 210 15% 85%;
+    --card: 215 25% 17%;
+    --card-foreground: 210 15% 88%;
 
-    --popover: 185 30% 15%;
-    --popover-foreground: 210 15% 85%;
+    --popover: 215 25% 17%;
+    --popover-foreground: 210 15% 88%;
 
     /* Copper/amber accent as primary */
     --primary: 28 60% 55%;
-    --primary-foreground: 185 35% 10%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 185 25% 20%;
+    --secondary: 215 22% 20%;
     --secondary-foreground: 210 15% 85%;
 
-    --muted: 185 20% 18%;
+    --muted: 215 18% 22%;
     --muted-foreground: 210 10% 55%;
 
-    --accent: 28 60% 55%;
-    --accent-foreground: 185 35% 10%;
+    --accent: 28 55% 50%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 185 20% 22%;
-    --input: 185 20% 22%;
+    --border: 215 18% 24%;
+    --input: 215 18% 22%;
     --ring: 28 60% 55%;
 
-    --radius: 0.25rem;
+    --radius: 0.5rem;
 
     /* Custom tokens */
     --copper: 28 60% 55%;
     --copper-light: 28 50% 70%;
     --copper-dark: 28 65% 40%;
-    --teal-deep: 185 40% 8%;
-    --teal-mid: 185 30% 18%;
+    --surface-dark: 215 30% 11%;
+    --surface-mid: 215 25% 17%;
+    --surface-light: 215 22% 20%;
     --silver: 210 15% 85%;
     --silver-dim: 210 10% 55%;
     --silver-bright: 210 20% 95%;
 
-    --font-display: 'Playfair Display', Georgia, serif;
     --font-body: 'Inter', system-ui, sans-serif;
 
-    --gradient-copper: linear-gradient(135deg, hsl(28 60% 55%), hsl(32 55% 45%));
-    --gradient-teal: linear-gradient(180deg, hsl(185 35% 12%), hsl(185 40% 8%));
-    --shadow-copper: 0 4px 30px hsl(28 60% 55% / 0.15);
-    --shadow-elegant: 0 20px 60px hsl(185 40% 5% / 0.5);
+    --shadow-copper: 0 4px 30px hsl(28 60% 55% / 0.2);
+    --shadow-elegant: 0 20px 60px hsl(215 30% 5% / 0.5);
   }
 }
 
@@ -66,10 +64,12 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
-  h1, h2, h3, h4 {
-    font-family: var(--font-display);
+  html {
+    scroll-behavior: smooth;
   }
 }
 
@@ -81,19 +81,23 @@
     background-clip: text;
   }
 
-  .border-copper {
-    border-color: hsl(28 60% 55% / 0.3);
+  .bg-surface-dark {
+    background-color: hsl(var(--surface-dark));
   }
 
-  .bg-teal-deep {
-    background-color: hsl(var(--teal-deep));
+  .bg-surface-mid {
+    background-color: hsl(var(--surface-mid));
   }
 
-  .bg-teal-mid {
-    background-color: hsl(var(--teal-mid));
+  .bg-surface-light {
+    background-color: hsl(var(--surface-light));
   }
 
   .line-copper {
     background: hsl(var(--copper));
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-32;
   }
 }

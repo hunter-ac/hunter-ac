@@ -1,63 +1,62 @@
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import heroImg from "@/assets/hero-automotive.jpg";
 
 const HeroSection = () => {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background image with overlay */}
       <div className="absolute inset-0">
         <img
           src={heroImg}
-          alt="Planta de automoción moderna"
+          alt="Concesionario de automoción premium"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-background/85" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-transparent to-background" />
+        <div className="absolute inset-0 bg-background/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-background/40" />
       </div>
 
-      <div className="relative z-10 container mx-auto px-6 text-center py-32">
+      <div className="relative z-10 container mx-auto px-6 py-32 md:py-40">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
+          className="max-w-3xl"
         >
-          <div className="inline-block mb-6">
-            <span className="text-xs font-body tracking-[0.3em] uppercase text-copper">
-              Executive Search · Automoción · Vehículo Industrial
-            </span>
-          </div>
-
-          <h1 className="font-display text-4xl sm:text-5xl md:text-7xl font-bold leading-tight mb-6 text-silver-bright">
-            El talento que impulsa
-            <br />
-            <span className="text-gradient-copper">la industria</span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] mb-6 text-silver-bright tracking-tight">
+            Talento especializado para automoción y vehículo industrial
           </h1>
 
-          <p className="max-w-2xl mx-auto text-lg md:text-xl font-body text-silver-dim leading-relaxed mb-10">
-            Consultora especializada en selección, evaluación y posicionamiento
-            de talento directivo y técnico para el sector de automoción y
-            vehículo industrial.
+          <p className="max-w-2xl text-base md:text-lg text-silver-dim leading-relaxed mb-10">
+            Ayudamos a concesionarios, grupos de automoción, empresas de renting y
+            compañías de movilidad a seleccionar y evaluar perfiles comerciales,
+            mandos intermedios y directivos con una metodología propia, sectorial
+            y orientada a resultados.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-start gap-4">
             <a
               href="#contacto"
-              className="px-8 py-3.5 bg-primary text-primary-foreground font-body text-sm font-semibold tracking-wide uppercase rounded hover:brightness-110 transition-all duration-300 shadow-[var(--shadow-copper)]"
+              className="inline-flex items-center gap-2 px-7 py-3.5 bg-primary text-primary-foreground font-body text-sm font-semibold rounded-lg hover:brightness-110 transition-all duration-300 shadow-[var(--shadow-copper)]"
             >
-              Iniciar conversación
+              Solicitar información
+              <ArrowRight className="w-4 h-4" />
             </a>
             <a
               href="#servicios"
-              className="px-8 py-3.5 border border-copper/30 text-silver font-body text-sm tracking-wide uppercase rounded hover:border-copper/60 hover:text-copper transition-all duration-300"
+              className="inline-flex items-center gap-2 px-7 py-3.5 border border-silver-dim/30 text-silver-bright font-body text-sm font-medium rounded-lg hover:border-silver-dim/60 hover:bg-white/5 transition-all duration-300"
             >
-              Nuestros servicios
+              Ver servicios
+            </a>
+            <a
+              href="#contacto"
+              className="inline-flex items-center gap-2 px-7 py-3.5 text-copper font-body text-sm font-medium hover:text-copper-light transition-colors duration-300"
+            >
+              Hablar con un consultor
             </a>
           </div>
         </motion.div>
       </div>
-
-      {/* Bottom decorative line */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-copper/40 to-transparent" />
     </section>
   );
 };
