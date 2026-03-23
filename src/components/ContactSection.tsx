@@ -35,13 +35,13 @@ const ContactSection = () => {
                 <div className="w-9 h-9 rounded-lg bg-copper/10 flex items-center justify-center">
                   <Mail className="w-4 h-4 text-copper" />
                 </div>
-                <span className="text-silver text-sm">info@hunterautomotive.com</span>
+                <span className="text-silver text-sm">contacto@hunter-ac.com</span>
               </div>
               <div className="flex items-center gap-4">
                 <div className="w-9 h-9 rounded-lg bg-copper/10 flex items-center justify-center">
                   <Phone className="w-4 h-4 text-copper" />
                 </div>
-                <span className="text-silver text-sm">+34 900 000 000</span>
+                <span className="text-silver text-sm">+34 679 73 78 65</span>
               </div>
               <div className="flex items-center gap-4">
                 <div className="w-9 h-9 rounded-lg bg-copper/10 flex items-center justify-center">
