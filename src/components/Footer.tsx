@@ -2,15 +2,23 @@ const Footer = () => {
   return (
     <footer className="border-t border-border py-10">
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-        <span className="font-display text-sm text-silver-dim">
-          © {new Date().getFullYear()} Hunter Automotive Consulting
-        </span>
+        <div className="flex items-center gap-3">
+          <div className="w-7 h-7 rounded-md bg-primary flex items-center justify-center">
+            <span className="text-primary-foreground font-bold text-xs">H</span>
+          </div>
+          <span className="text-sm text-silver-dim">
+            © {new Date().getFullYear()} Hunter Automotive Consulting. Todos los derechos reservados.
+          </span>
+        </div>
         <div className="flex gap-6">
-          <a href="#" className="font-body text-xs text-silver-dim hover:text-copper transition-colors uppercase tracking-wider">
+          <a href="#" className="text-xs text-silver-dim hover:text-copper transition-colors">
             Política de privacidad
           </a>
-          <a href="#" className="font-body text-xs text-silver-dim hover:text-copper transition-colors uppercase tracking-wider">
+          <a href="#" className="text-xs text-silver-dim hover:text-copper transition-colors">
             Aviso legal
+          </a>
+          <a href="#" className="text-xs text-silver-dim hover:text-copper transition-colors">
+            Cookies
           </a>
         </div>
       </div>

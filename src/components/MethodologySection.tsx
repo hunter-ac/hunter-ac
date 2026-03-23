@@ -3,70 +3,90 @@ import { motion } from "framer-motion";
 const steps = [
   {
     number: "01",
-    title: "Inmersión sectorial",
-    text: "Análisis profundo del contexto, la cultura organizativa y los requisitos técnicos y competenciales del puesto.",
+    title: "Diagnóstico de estructura",
+    text: "Analizamos la organización comercial actual y detectamos puntos críticos que afectan la rentabilidad.",
   },
   {
     number: "02",
-    title: "Mapeo estratégico",
-    text: "Identificación exhaustiva de candidatos target en el ecosistema automotriz nacional e internacional.",
+    title: "Definición de perfil rentable",
+    text: "Creamos el perfil ideal basado en competencias específicas del sector automotor y objetivos de negocio.",
   },
   {
     number: "03",
-    title: "Evaluación rigurosa",
-    text: "Entrevistas por competencias, pruebas técnicas y evaluación de fit cultural con metodología propia.",
+    title: "Evaluación sectorial específica",
+    text: "Aplicamos test y entrevistas diseñadas exclusivamente para el entorno de concesionarios. AC001 como base, AC200/AC300/AC400 según perfil, HPS16X y entrevista post-test.",
   },
   {
     number: "04",
-    title: "Acompañamiento",
-    text: "Seguimiento post-incorporación para garantizar la integración y el rendimiento del talento seleccionado.",
+    title: "Informe estratégico",
+    text: "Entregamos análisis detallado con gráficas radar, barras, scorecards, fortalezas, riesgos y recomendación final.",
+  },
+  {
+    number: "05",
+    title: "Seguimiento post-incorporación",
+    text: "Acompañamiento en los primeros meses para asegurar integración exitosa y cumplimiento de objetivos.",
   },
 ];
 
+const fadeInUp = {
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+};
+
 const MethodologySection = () => {
   return (
-    <section id="metodologia" className="py-24 md:py-32 relative">
+    <section id="metodologia" className="section-padding relative">
       <div className="container mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <span className="text-xs font-body tracking-[0.3em] uppercase text-copper mb-4 block">
+        <motion.div {...fadeInUp} transition={{ duration: 0.7 }} className="text-center mb-16">
+          <span className="text-xs tracking-[0.25em] uppercase text-copper mb-3 block font-medium">
             Metodología
           </span>
-          <h2 className="font-display text-3xl md:text-5xl font-bold text-silver-bright">
-            Un proceso a medida
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-silver-bright">
+            Metodología Hunter-AC
           </h2>
-          <div className="w-16 h-0.5 line-copper mx-auto mt-6 rounded-full" />
+          <p className="max-w-2xl mx-auto text-silver-dim mt-5 leading-relaxed">
+            Nuestro proceso de selección estratégica en 5 pasos diseñado
+            específicamente para el sector automotor.
+          </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-x-16 gap-y-12 max-w-4xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           {steps.map((step, i) => (
             <motion.div
               key={step.number}
-              initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.12 }}
-              className="flex gap-6"
+              {...fadeInUp}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="flex gap-6 mb-10 last:mb-0 group"
             >
-              <span className="font-display text-4xl font-bold text-copper/30 leading-none select-none">
-                {step.number}
-              </span>
-              <div>
-                <h3 className="font-display text-lg font-semibold text-silver-bright mb-2">
-                  {step.title}
-                </h3>
-                <p className="font-body text-silver-dim text-sm leading-relaxed">
-                  {step.text}
-                </p>
+              <div className="flex flex-col items-center">
+                <div className="w-12 h-12 rounded-xl bg-copper/10 border border-copper/20 flex items-center justify-center flex-shrink-0 group-hover:bg-copper/20 transition-colors">
+                  <span className="text-copper font-bold text-sm">{step.number}</span>
+                </div>
+                {i < steps.length - 1 && (
+                  <div className="w-px h-full bg-border mt-2 min-h-[24px]" />
+                )}
+              </div>
+              <div className="pb-2">
+                <h3 className="font-semibold text-silver-bright text-base mb-1.5">{step.title}</h3>
+                <p className="text-silver-dim text-sm leading-relaxed">{step.text}</p>
               </div>
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          {...fadeInUp}
+          transition={{ duration: 0.7, delay: 0.3 }}
+          className="mt-16 text-center"
+        >
+          <div className="bg-card border border-border rounded-xl p-8 max-w-3xl mx-auto">
+            <p className="text-silver-bright text-lg md:text-xl font-semibold leading-relaxed">
+              No trabajamos con selección genérica. Evaluamos el encaje real entre candidato,
+              puesto y contexto de negocio.
+            </p>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
