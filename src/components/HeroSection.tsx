@@ -36,13 +36,6 @@ const HeroSection = () => {
 
           <div className="flex flex-col sm:flex-row items-start gap-4">
             <a
-              href="#contacto"
-              className="inline-flex items-center gap-2 px-7 py-3.5 bg-primary text-primary-foreground font-body text-sm font-semibold rounded-lg hover:brightness-110 transition-all duration-300 shadow-[var(--shadow-copper)]"
-            >
-              Solicitar información
-              <ArrowRight className="w-4 h-4" />
-            </a>
-            <a
               href="#servicios"
               className="inline-flex items-center gap-2 px-7 py-3.5 border border-silver-dim/30 text-silver-bright font-body text-sm font-medium rounded-lg hover:border-silver-dim/60 hover:bg-white/5 transition-all duration-300"
             >
@@ -50,9 +43,10 @@ const HeroSection = () => {
             </a>
             <a
               href="#contacto"
-              className="inline-flex items-center gap-2 px-7 py-3.5 text-copper font-body text-sm font-medium hover:text-copper-light transition-colors duration-300"
+              className="inline-flex items-center gap-2 px-7 py-3.5 bg-primary text-primary-foreground font-body text-sm font-semibold rounded-lg hover:brightness-110 transition-all duration-300 shadow-[var(--shadow-copper)]"
             >
               Hablar con un consultor
+              <ArrowRight className="w-4 h-4" />
             </a>
           </div>
         </motion.div>
