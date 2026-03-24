@@ -24,7 +24,7 @@ const HeroSection = () => {
           className="max-w-3xl"
         >
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] mb-6 text-silver-bright tracking-tight">
-            Talento especializado para automoción y vehículo industrial
+            Seleccionamos talento sectorial de automoción
           </h1>
 
           <p className="max-w-2xl text-base md:text-lg text-silver-dim leading-relaxed mb-10">
