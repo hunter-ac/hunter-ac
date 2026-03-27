@@ -30,18 +30,18 @@ const ContactSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
-            <div className="flex items-center gap-3">
+            <a href="mailto:contacto@hunter-ac.com" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
               <div className="w-9 h-9 rounded-lg bg-copper/10 flex items-center justify-center">
                 <Mail className="w-4 h-4 text-copper" />
               </div>
               <span className="text-silver text-sm">contacto@hunter-ac.com</span>
-            </div>
-            <div className="flex items-center gap-3">
+            </a>
+            <a href="tel:+34679737865" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
               <div className="w-9 h-9 rounded-lg bg-copper/10 flex items-center justify-center">
                 <Phone className="w-4 h-4 text-copper" />
               </div>
               <span className="text-silver text-sm">+34 679 73 78 65</span>
-            </div>
+            </a>
             <div className="flex items-center gap-3">
               <div className="w-9 h-9 rounded-lg bg-copper/10 flex items-center justify-center">
                 <MapPin className="w-4 h-4 text-copper" />
