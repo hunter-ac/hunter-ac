@@ -42,7 +42,7 @@ const HeroSection = () => {
               Ver servicios
             </a>
             <a
-              href="#contacto"
+              href="mailto:contacto@hunter-ac.com?subject=Consulta%20desde%20la%20web"
               className="inline-flex items-center gap-2 px-7 py-3.5 bg-primary text-primary-foreground font-body text-sm font-semibold rounded-lg hover:brightness-110 transition-all duration-300 shadow-[var(--shadow-copper)]"
             >
               Hablar con un consultor
