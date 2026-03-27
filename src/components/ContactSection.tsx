@@ -23,97 +23,41 @@ const ContactSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-5 gap-12 max-w-6xl mx-auto">
-          {/* Contact info */}
-          <motion.div {...fadeInUp} transition={{ duration: 0.6, delay: 0.1 }} className="lg:col-span-2 flex flex-col justify-center gap-8">
-            <p className="text-silver-dim leading-relaxed">
-              Ya sea para cubrir una posición estratégica, evaluar a su equipo
-              directivo o contratar un servicio complementario, estamos preparados para ayudarle.
-            </p>
-            <div className="flex flex-col gap-5">
-              <div className="flex items-center gap-4">
-                <div className="w-9 h-9 rounded-lg bg-copper/10 flex items-center justify-center">
-                  <Mail className="w-4 h-4 text-copper" />
-                </div>
-                <span className="text-silver text-sm">contacto@hunter-ac.com</span>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="w-9 h-9 rounded-lg bg-copper/10 flex items-center justify-center">
-                  <Phone className="w-4 h-4 text-copper" />
-                </div>
-                <span className="text-silver text-sm">+34 679 73 78 65</span>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="w-9 h-9 rounded-lg bg-copper/10 flex items-center justify-center">
-                  <MapPin className="w-4 h-4 text-copper" />
-                </div>
-                <span className="text-silver text-sm">Madrid · Barcelona · Valencia</span>
-              </div>
-            </div>
-          </motion.div>
+        <motion.div {...fadeInUp} transition={{ duration: 0.6, delay: 0.1 }} className="max-w-2xl mx-auto text-center">
+          <p className="text-silver-dim leading-relaxed mb-10">
+            Ya sea para cubrir una posición estratégica, evaluar a su equipo
+            directivo o contratar un servicio complementario, estamos preparados para ayudarle.
+          </p>
 
-          {/* Form */}
-          <motion.form
-            {...fadeInUp}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            onSubmit={(e) => e.preventDefault()}
-            className="lg:col-span-3 flex flex-col gap-4 bg-card border border-border rounded-xl p-7"
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
+            <div className="flex items-center gap-3">
+              <div className="w-9 h-9 rounded-lg bg-copper/10 flex items-center justify-center">
+                <Mail className="w-4 h-4 text-copper" />
+              </div>
+              <span className="text-silver text-sm">contacto@hunter-ac.com</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="w-9 h-9 rounded-lg bg-copper/10 flex items-center justify-center">
+                <Phone className="w-4 h-4 text-copper" />
+              </div>
+              <span className="text-silver text-sm">+34 679 73 78 65</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="w-9 h-9 rounded-lg bg-copper/10 flex items-center justify-center">
+                <MapPin className="w-4 h-4 text-copper" />
+              </div>
+              <span className="text-silver text-sm">Madrid · Barcelona · Valencia</span>
+            </div>
+          </div>
+
+          <a
+            href="mailto:contacto@hunter-ac.com?subject=Consulta%20desde%20la%20web"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground text-sm font-semibold rounded-lg hover:brightness-110 transition-all duration-300 shadow-[var(--shadow-copper)]"
           >
-            <div className="grid sm:grid-cols-2 gap-4">
-              <input
-                type="text"
-                placeholder="Nombre"
-                className="bg-secondary border border-border rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-copper/50 transition-colors"
-              />
-              <input
-                type="text"
-                placeholder="Empresa"
-                className="bg-secondary border border-border rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-copper/50 transition-colors"
-              />
-            </div>
-            <div className="grid sm:grid-cols-2 gap-4">
-              <input
-                type="text"
-                placeholder="Cargo"
-                className="bg-secondary border border-border rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-copper/50 transition-colors"
-              />
-              <input
-                type="tel"
-                placeholder="Teléfono"
-                className="bg-secondary border border-border rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-copper/50 transition-colors"
-              />
-            </div>
-            <input
-              type="email"
-              placeholder="Email corporativo"
-              className="bg-secondary border border-border rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-copper/50 transition-colors"
-            />
-            <select
-              className="bg-secondary border border-border rounded-lg px-4 py-3 text-sm text-muted-foreground focus:outline-none focus:border-copper/50 transition-colors appearance-none"
-              defaultValue=""
-            >
-              <option value="" disabled>Tipo de necesidad</option>
-              <option value="seleccion">Selección de perfiles</option>
-              <option value="evaluacion">Evaluación de candidatos</option>
-              <option value="assessment">Assessment directivo</option>
-              <option value="mapeo">Mapeo de mercado</option>
-              <option value="candidato">Servicio para candidato</option>
-              <option value="otro">Otro</option>
-            </select>
-            <textarea
-              placeholder="Cuéntenos su necesidad"
-              rows={4}
-              className="bg-secondary border border-border rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-copper/50 transition-colors resize-none"
-            />
-            <button
-              type="submit"
-              className="mt-2 inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-primary text-primary-foreground text-sm font-semibold rounded-lg hover:brightness-110 transition-all duration-300 shadow-[var(--shadow-copper)]"
-            >
-              Enviar solicitud
-              <ArrowRight className="w-4 h-4" />
-            </button>
-          </motion.form>
-        </div>
+            Hablar con un consultor
+            <ArrowRight className="w-4 h-4" />
+          </a>
+        </motion.div>
       </div>
     </section>
   );

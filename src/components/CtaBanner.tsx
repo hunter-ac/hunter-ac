@@ -20,7 +20,7 @@ const CtaBanner = () => {
             especializados en automoción y vehículo industrial.
           </p>
           <a
-            href="#contacto"
+            href="mailto:contacto@hunter-ac.com?subject=Consulta%20desde%20la%20web"
             className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-semibold text-sm rounded-lg hover:brightness-110 transition-all duration-300 shadow-[var(--shadow-copper)]"
           >
             Contactar con un consultor
