@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer className="border-t border-border py-10">
@@ -11,15 +13,15 @@ const Footer = () => {
           </span>
         </div>
         <div className="flex gap-6">
-          <a href="#" className="text-xs text-silver-dim hover:text-copper transition-colors">
+          <Link to="/politica-de-privacidad" className="text-xs text-silver-dim hover:text-copper transition-colors">
             Política de privacidad
-          </a>
-          <a href="#" className="text-xs text-silver-dim hover:text-copper transition-colors">
+          </Link>
+          <Link to="/aviso-legal" className="text-xs text-silver-dim hover:text-copper transition-colors">
             Aviso legal
-          </a>
-          <a href="#" className="text-xs text-silver-dim hover:text-copper transition-colors">
+          </Link>
+          <Link to="/cookies" className="text-xs text-silver-dim hover:text-copper transition-colors">
             Cookies
-          </a>
+          </Link>
         </div>
       </div>
     </footer>
