@@ -20,6 +20,15 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const scrollTo = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    setOpen(false);
+    const el = document.querySelector(href);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -29,7 +38,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
-        <a href="#hero" className="flex items-center gap-3">
+        <a href="#hero" onClick={(e) => scrollTo(e, "#hero")} className="flex items-center gap-3">
           <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center">
             <span className="text-primary-foreground font-bold text-sm">H</span>
           </div>
@@ -44,6 +53,7 @@ const Navbar = () => {
             <a
               key={item.href}
               href={item.href}
+              onClick={(e) => scrollTo(e, item.href)}
               className="text-sm font-body text-silver-dim hover:text-silver-bright transition-colors duration-300"
             >
               {item.label}
@@ -51,6 +61,7 @@ const Navbar = () => {
           ))}
           <a
             href="#contacto"
+            onClick={(e) => scrollTo(e, "#contacto")}
             className="px-5 py-2.5 bg-primary text-primary-foreground font-body text-sm font-medium rounded-lg hover:brightness-110 transition-all duration-300"
           >
             Contacto
@@ -80,7 +91,7 @@ const Navbar = () => {
                 <li key={item.href}>
                   <a
                     href={item.href}
-                    onClick={() => setOpen(false)}
+                    onClick={(e) => scrollTo(e, item.href)}
                     className="text-sm font-body text-silver-dim hover:text-silver-bright transition-colors"
                   >
                     {item.label}
