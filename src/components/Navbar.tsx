@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import logoHunter from "@/assets/logo-hunter.png";
 
 const navItems = [
   { label: "Inicio", href: "#hero" },
@@ -41,9 +42,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
         <a href="#hero" onClick={(e) => scrollTo(e, "#hero")} className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-sm">H</span>
-          </div>
+          <img src={logoHunter} alt="Hunter Automotive Consulting" className="h-10 w-auto rounded" />
           <span className="font-body text-sm font-semibold tracking-wide text-silver-bright">
             Hunter Automotive Consulting
           </span>
