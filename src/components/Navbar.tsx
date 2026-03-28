@@ -22,10 +22,12 @@ const Navbar = () => {
 
   const scrollTo = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
-    setOpen(false);
     const el = document.querySelector(href);
     if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
+      setOpen(false);
+      setTimeout(() => {
+        el.scrollIntoView({ behavior: "smooth" });
+      }, 350);
     }
   };
 
