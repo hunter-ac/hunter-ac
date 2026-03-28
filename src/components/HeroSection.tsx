@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import heroImg from "@/assets/hero-automotive.jpg";
+import logoHunter from "@/assets/logo-hunter.png";
 
 const HeroSection = () => {
   return (
@@ -23,6 +24,8 @@ const HeroSection = () => {
           transition={{ duration: 0.9, ease: "easeOut" }}
           className="max-w-3xl"
         >
+          <img src={logoHunter} alt="Hunter Automotive Consulting" className="h-20 md:h-28 w-auto mb-8 rounded-lg" />
+
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] mb-6 text-silver-bright tracking-tight">
             Seleccionamos talento sectorial de automoción
           </h1>
