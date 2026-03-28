@@ -22,9 +22,9 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
-          className="max-w-3xl"
+          className="max-w-3xl mx-auto text-center"
         >
-          <img src={logoHunter} alt="Hunter Automotive Consulting" className="h-20 md:h-28 w-auto mb-8 rounded-lg" />
+          <img src={logoHunter} alt="Hunter Automotive Consulting" className="h-28 md:h-36 w-auto mb-8 rounded-lg mx-auto" />
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] mb-6 text-silver-bright tracking-tight">
             Seleccionamos talento sectorial de automoción
@@ -37,7 +37,7 @@ const HeroSection = () => {
             y orientada a resultados.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-start gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="#servicios"
               className="inline-flex items-center gap-2 px-7 py-3.5 border border-silver-dim/30 text-silver-bright font-body text-sm font-medium rounded-lg hover:border-silver-dim/60 hover:bg-white/5 transition-all duration-300"
