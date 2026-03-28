@@ -91,7 +91,7 @@ const Navbar = () => {
                 <li key={item.href}>
                   <a
                     href={item.href}
-                    onClick={() => setOpen(false)}
+                    onClick={(e) => scrollTo(e, item.href)}
                     className="text-sm font-body text-silver-dim hover:text-silver-bright transition-colors"
                   >
                     {item.label}
