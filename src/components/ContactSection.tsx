@@ -36,11 +36,11 @@ const ContactSection = () => {
               </div>
               <span className="text-silver text-sm">contacto@hunter-ac.com</span>
             </a>
-            <a href="tel:+34679737865" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+            <a href="tel:+34621385647" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
               <div className="w-9 h-9 rounded-lg bg-copper/10 flex items-center justify-center">
                 <Phone className="w-4 h-4 text-copper" />
               </div>
-              <span className="text-silver text-sm">+34 679 73 78 65</span>
+              <span className="text-silver text-sm">+34 621 38 56 47</span>
             </a>
             <div className="flex items-center gap-3">
               <div className="w-9 h-9 rounded-lg bg-copper/10 flex items-center justify-center">
