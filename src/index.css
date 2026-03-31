@@ -101,3 +101,14 @@
     @apply py-20 md:py-28 lg:py-32;
   }
 }
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
