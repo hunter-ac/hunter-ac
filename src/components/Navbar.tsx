@@ -96,10 +96,10 @@ const Navbar = () => {
           >
             <ul className="flex flex-col items-center gap-5 py-8">
               {navItems.map((item) => (
-                <li key={item.href}>
+                <li key={item.id}>
                   <a
-                    href={item.href}
-                    onClick={(e) => scrollTo(e, item.href)}
+                    href={`/#${item.id}`}
+                    onClick={(e) => scrollTo(e, item.id)}
                     className="text-sm font-body text-silver-dim hover:text-silver-bright transition-colors"
                   >
                     {item.label}
