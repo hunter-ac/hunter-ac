@@ -1,19 +1,22 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { useLocation, useNavigate } from "react-router-dom";
 import logoHunter from "@/assets/logo-hunter.png";
 
 const navItems = [
-  { label: "Inicio", href: "#hero" },
-  { label: "Servicios", href: "#servicios" },
-  { label: "Metodología", href: "#metodologia" },
-  { label: "Sectores", href: "#sectores" },
-  { label: "Contacto", href: "#contacto" },
+  { label: "Inicio", id: "hero" },
+  { label: "Servicios", id: "servicios" },
+  { label: "Metodología", id: "metodologia" },
+  { label: "Sectores", id: "sectores" },
+  { label: "Contacto", id: "contacto" },
 ];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -21,14 +24,18 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const scrollTo = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const scrollTo = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
-    const el = document.querySelector(href);
-    if (el) {
-      setOpen(false);
-      setTimeout(() => {
-        el.scrollIntoView({ behavior: "smooth" });
-      }, 350);
+    setOpen(false);
+    if (pathname !== "/") {
+      navigate("/#" + id);
+    } else {
+      const el = document.getElementById(id);
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth" });
+        }, 350);
+      }
     }
   };
 
