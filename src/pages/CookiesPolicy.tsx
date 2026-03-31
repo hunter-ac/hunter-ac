@@ -38,21 +38,23 @@ const CookiesPolicy = () => {
             Los datos recogidos a través de cookies se conservan durante un período máximo de <strong className="text-foreground">12 meses</strong> desde su instalación, salvo que el usuario las elimine antes de dicho plazo.
           </p>
 
-          <h2 className="text-xl font-semibold text-foreground pt-4">3. Gestión de cookies</h2>
+          <h2 className="text-xl font-semibold text-foreground pt-4">4. Cómo desactivar las cookies</h2>
           <p>
-            El usuario puede configurar su navegador para rechazar la instalación de cookies o para recibir un aviso cada vez que se envíe una cookie. Los procedimientos para bloquear o eliminar cookies pueden variar según el navegador:
+            El usuario puede configurar su navegador para rechazar la instalación de cookies o para recibir un aviso cada vez que se envíe una cookie:
           </p>
-          <ul className="list-disc pl-6 space-y-1">
-            <li><strong>Chrome:</strong> Configuración → Privacidad y seguridad → Cookies</li>
-            <li><strong>Firefox:</strong> Opciones → Privacidad y seguridad → Cookies y datos del sitio</li>
-            <li><strong>Safari:</strong> Preferencias → Privacidad → Cookies y datos de sitios web</li>
-            <li><strong>Edge:</strong> Configuración → Privacidad → Cookies</li>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>
+              <strong>Google Chrome:</strong> Ve a Configuración → Privacidad y seguridad → Cookies de terceros. Desde allí puedes bloquear todas las cookies, bloquear solo las de terceros o borrar las existentes.
+            </li>
+            <li>
+              <strong>Safari:</strong> Ve a Preferencias → Privacidad y activa la opción "Impedir seguimiento entre sitios". También puedes seleccionar "Bloquear todas las cookies" para una restricción total.
+            </li>
           </ul>
           <p>
             Tenga en cuenta que desactivar ciertas cookies puede afectar al funcionamiento correcto de algunas funcionalidades del sitio web.
           </p>
 
-          <h2 className="text-xl font-semibold text-foreground pt-4">4. Actualizaciones</h2>
+          <h2 className="text-xl font-semibold text-foreground pt-4">5. Actualizaciones</h2>
           <p>
             Hunter AC podrá modificar esta política de cookies en función de cambios legislativos, regulatorios o de los servicios ofrecidos. Se recomienda revisar periódicamente esta página para estar informado sobre el uso de cookies.
           </p>
