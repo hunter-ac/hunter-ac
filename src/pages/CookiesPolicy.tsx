@@ -59,7 +59,7 @@ const CookiesPolicy = () => {
             Hunter AC podrá modificar esta política de cookies en función de cambios legislativos, regulatorios o de los servicios ofrecidos. Se recomienda revisar periódicamente esta página para estar informado sobre el uso de cookies.
           </p>
 
-          <h2 className="text-xl font-semibold text-foreground pt-4">5. Contacto</h2>
+          <h2 className="text-xl font-semibold text-foreground pt-4">6. Contacto</h2>
           <p>
             Para cualquier consulta sobre el uso de cookies en este sitio web, puede contactarnos en{" "}
             <a href="mailto:contacto@hunter-ac.com" className="text-primary hover:underline">contacto@hunter-ac.com</a>.
