@@ -48,7 +48,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
-        <a href="#hero" onClick={(e) => scrollTo(e, "#hero")} className="flex items-center gap-3">
+        <a href="/#hero" onClick={(e) => scrollTo(e, "hero")} className="flex items-center gap-3">
           <img src={logoHunter} alt="Hunter Automotive Consulting" className="h-10 w-auto rounded" />
           <span className="font-body text-sm font-semibold tracking-wide text-silver-bright">
             Hunter Automotive Consulting
@@ -59,17 +59,17 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-8">
           {navItems.slice(0, -1).map((item) => (
             <a
-              key={item.href}
-              href={item.href}
-              onClick={(e) => scrollTo(e, item.href)}
+              key={item.id}
+              href={`/#${item.id}`}
+              onClick={(e) => scrollTo(e, item.id)}
               className="text-sm font-body text-silver-dim hover:text-silver-bright transition-colors duration-300"
             >
               {item.label}
             </a>
           ))}
           <a
-            href="#contacto"
-            onClick={(e) => scrollTo(e, "#contacto")}
+            href="/#contacto"
+            onClick={(e) => scrollTo(e, "contacto")}
             className="px-5 py-2.5 bg-primary text-primary-foreground font-body text-sm font-medium rounded-lg hover:brightness-110 transition-all duration-300"
           >
             Contacto
