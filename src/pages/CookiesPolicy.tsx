@@ -23,9 +23,19 @@ const CookiesPolicy = () => {
             Son imprescindibles para el funcionamiento del sitio web. Permiten la navegación y el uso de las funcionalidades básicas. No requieren consentimiento del usuario.
           </p>
 
-          <h3 className="text-lg font-medium text-foreground pt-2">Cookies analíticas</h3>
+          <h3 className="text-lg font-medium text-foreground pt-2">Cookies de personalización</h3>
           <p>
-            Recopilan información de forma anónima sobre la navegación del usuario con el fin de mejorar el rendimiento y la experiencia del sitio web. Solo se instalan previo consentimiento del usuario.
+            Permiten recordar las preferencias del usuario, como el idioma, la región o las configuraciones de visualización, para ofrecer una experiencia más personalizada en visitas sucesivas.
+          </p>
+
+          <h3 className="text-lg font-medium text-foreground pt-2">Cookies analíticas (Google Analytics)</h3>
+          <p>
+            Recopilan información de forma anónima sobre la navegación del usuario con el fin de mejorar el rendimiento y la experiencia del sitio web. Utilizamos Google Analytics para analizar el tráfico y el comportamiento de los usuarios. Solo se instalan previo consentimiento del usuario.
+          </p>
+
+          <h2 className="text-xl font-semibold text-foreground pt-4">3. Duración de las cookies</h2>
+          <p>
+            Los datos recogidos a través de cookies se conservan durante un período máximo de <strong className="text-foreground">12 meses</strong> desde su instalación, salvo que el usuario las elimine antes de dicho plazo.
           </p>
 
           <h2 className="text-xl font-semibold text-foreground pt-4">3. Gestión de cookies</h2>
