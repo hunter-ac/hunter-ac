@@ -1,13 +1,10 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import ValuePropositionSection from "@/components/ValuePropositionSection";
+import DifferentiationSection from "@/components/DifferentiationSection";
+import WhyUsSection from "@/components/WhyUsSection";
 import ServicesSection from "@/components/ServicesSection";
-import ComplementaryServicesSection from "@/components/ComplementaryServicesSection";
+import AuthoritySection from "@/components/AuthoritySection";
 import MethodologySection from "@/components/MethodologySection";
-import ProfilesSection from "@/components/ProfilesSection";
-import ReportsSection from "@/components/ReportsSection";
-import CandidateServicesSection from "@/components/CandidateServicesSection";
-import AboutSection from "@/components/AboutSection";
 import CtaBanner from "@/components/CtaBanner";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -17,14 +14,11 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <HeroSection />
-      <ValuePropositionSection />
+      <DifferentiationSection />
+      <WhyUsSection />
       <ServicesSection />
-      <ComplementaryServicesSection />
+      <AuthoritySection />
       <MethodologySection />
-      <ProfilesSection />
-      <ReportsSection />
-      <CandidateServicesSection />
-      <AboutSection />
       <CtaBanner />
       <ContactSection />
       <Footer />

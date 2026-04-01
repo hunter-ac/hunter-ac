@@ -9,7 +9,7 @@ export default {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1280px",
+        "2xl": "1100px",
       },
     },
     extend: {
@@ -47,23 +47,9 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        copper: {
-          DEFAULT: "hsl(var(--copper))",
-          light: "hsl(var(--copper-light))",
-          dark: "hsl(var(--copper-dark))",
-        },
-        silver: {
-          DEFAULT: "hsl(var(--silver))",
-          dim: "hsl(var(--silver-dim))",
-          bright: "hsl(var(--silver-bright))",
-        },
-        surface: {
-          dark: "hsl(var(--surface-dark))",
-          mid: "hsl(var(--surface-mid))",
-          light: "hsl(var(--surface-light))",
-        },
       },
       fontFamily: {
+        heading: ['Playfair Display', 'Georgia', 'serif'],
         body: ['Inter', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
@@ -80,15 +66,10 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "fade-up": {
-          "0%": { opacity: "0", transform: "translateY(20px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-up": "fade-up 0.6s ease-out forwards",
       },
     },
   },

@@ -1,30 +1,25 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 
 const CtaBanner = () => {
   return (
-    <section className="py-16 md:py-24 relative">
+    <section className="py-24 md:py-32">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="text-center max-w-3xl mx-auto"
+          className="max-w-3xl mx-auto text-center"
         >
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-silver-bright leading-tight mb-5">
-            Si la rentabilidad depende de las personas, la selección no puede ser genérica
+          <h2 className="font-heading text-3xl md:text-4xl font-semibold text-foreground leading-tight mb-8">
+            Si buscas perfiles que entiendan el negocio, necesitas una consultora
+            que también lo entienda.
           </h2>
-          <p className="text-silver-dim mb-8 leading-relaxed">
-            Descubra cómo optimizar su estructura comercial con nuestros servicios
-            especializados en automoción y vehículo industrial.
-          </p>
           <a
             href="mailto:contacto@hunter-ac.com?subject=Consulta%20desde%20la%20web"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-semibold text-sm rounded-lg hover:brightness-110 transition-all duration-300 shadow-[var(--shadow-copper)]"
+            className="inline-flex items-center px-8 py-3.5 bg-primary text-primary-foreground font-body text-sm font-semibold rounded hover:bg-primary/90 transition-colors"
           >
-            Contactar con un consultor
-            <ArrowRight className="w-4 h-4" />
+            Hablar con Hunter AC
           </a>
         </motion.div>
       </div>
