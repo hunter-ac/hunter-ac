@@ -1,26 +1,23 @@
 import { useState, useEffect } from "react";
-import { X } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-
-const STORAGE_KEY = "app-cookie-consent";
+import { X } from "lucide-react";
 
 const CookieConsentBanner = () => {
   const [visible, setVisible] = useState(false);
   const [exiting, setExiting] = useState(false);
 
   useEffect(() => {
-    const consent = localStorage.getItem(STORAGE_KEY);
+    const consent = localStorage.getItem("app-cookie-consent");
     if (!consent) {
-      const timer = setTimeout(() => setVisible(true), 800);
+      const timer = setTimeout(() => setVisible(true), 1000);
       return () => clearTimeout(timer);
     }
   }, []);
 
-  const handleConsent = (value: "accepted" | "rejected") => {
+  const handleConsent = (value: string) => {
     setExiting(true);
     setTimeout(() => {
-      localStorage.setItem(STORAGE_KEY, value);
+      localStorage.setItem("app-cookie-consent", value);
       setVisible(false);
     }, 300);
   };
@@ -29,34 +26,39 @@ const CookieConsentBanner = () => {
 
   return (
     <div
-      className={`fixed bottom-4 left-4 z-50 max-w-sm w-[calc(100%-2rem)] sm:w-auto rounded-xl border border-border bg-card text-card-foreground shadow-lg p-5 transition-all duration-300 ${
-        exiting ? "opacity-0 translate-y-4" : "animate-[slide-up_0.4s_ease-out]"
+      className={`fixed bottom-6 left-6 z-[100] max-w-sm bg-background border border-border rounded-lg shadow-lg p-5 transition-all duration-300 ${
+        exiting ? "opacity-0 translate-y-4" : "opacity-100 translate-y-0"
       }`}
+      style={{ animation: exiting ? "none" : "slide-up 0.4s ease-out" }}
     >
       <button
         onClick={() => handleConsent("rejected")}
         className="absolute top-3 right-3 text-muted-foreground hover:text-foreground transition-colors"
-        aria-label="Cerrar"
       >
-        <X className="w-4 h-4" />
+        <X size={16} />
       </button>
-
-      <p className="text-sm text-muted-foreground pr-6 mb-4 leading-relaxed">
-        Valoramos tu privacidad. Utilizamos cookies para mejorar tu experiencia. Puedes aceptarlas todas o configurar tus preferencias.
+      <p className="text-sm text-foreground mb-1 font-medium">Privacidad</p>
+      <p className="text-xs text-muted-foreground leading-relaxed mb-4">
+        Utilizamos cookies para mejorar tu experiencia. Puedes aceptarlas todas o rechazarlas.
       </p>
-
-      <div className="flex items-center gap-3 flex-wrap">
-        <Button size="sm" onClick={() => handleConsent("accepted")}>
+      <div className="flex items-center gap-3">
+        <button
+          onClick={() => handleConsent("accepted")}
+          className="px-4 py-2 bg-primary text-primary-foreground text-xs font-medium rounded hover:bg-primary/90 transition-colors"
+        >
           Aceptar todas
-        </Button>
-        <Button size="sm" variant="outline" onClick={() => handleConsent("rejected")}>
+        </button>
+        <button
+          onClick={() => handleConsent("rejected")}
+          className="px-4 py-2 border border-border text-foreground text-xs font-medium rounded hover:bg-muted transition-colors"
+        >
           Rechazar
-        </Button>
+        </button>
         <Link
           to="/cookies"
-          className="text-xs text-primary hover:underline"
+          className="text-xs text-muted-foreground hover:text-foreground transition-colors underline"
         >
-          Política de Cookies
+          Más info
         </Link>
       </div>
     </div>
