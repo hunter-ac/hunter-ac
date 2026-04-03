@@ -20,6 +20,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <CookieConsentBanner />
+        <WhatsAppButton />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/politica-de-privacidad" element={<PrivacyPolicy />} />
