@@ -9,6 +9,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
 import LegalNotice from "./pages/LegalNotice.tsx";
 import CookiesPolicy from "./pages/CookiesPolicy.tsx";
 import CookieConsentBanner from "./components/CookieConsentBanner.tsx";
+import WhatsAppButton from "./components/WhatsAppButton.tsx";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +20,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <CookieConsentBanner />
+        <WhatsAppButton />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/politica-de-privacidad" element={<PrivacyPolicy />} />
