@@ -4,25 +4,21 @@ const testimonials = [
   {
     name: "Carlos Medina",
     role: "Gerente de Concesionario",
-    company: "Grupo Autotruck Levante",
     text: "Llevábamos meses buscando un director comercial que entendiese el negocio del vehículo industrial. Hunter AC nos presentó al candidato perfecto en tres semanas. Se nota que conocen el sector desde dentro.",
   },
   {
     name: "Laura Fernández",
     role: "Directora de RRHH",
-    company: "Ibérica de Vehículos Industriales",
     text: "La diferencia con otras consultoras es abismal. No tuvimos que explicarles qué es un jefe de ventas de industrial: ellos ya lo sabían. El proceso fue rápido, profesional y con candidatos que realmente encajaban.",
   },
   {
     name: "Miguel Ángel Torres",
     role: "Director General",
-    company: "Comercial Vehículos del Sur",
     text: "Nos ayudaron a cubrir dos posiciones clave en nuestra red comercial. Su conocimiento del perfil comercial en automoción es excepcional. Repetiríamos sin dudarlo.",
   },
   {
     name: "Patricia Ruiz",
     role: "Responsable de Selección",
-    company: "Grupo Novatrans",
     text: "Hunter AC entiende lo que necesitamos porque han estado en nuestro lado del negocio. Los informes de candidatos son claros, útiles y van al grano. Una consultora de referencia para el sector.",
   },
 ];
@@ -53,7 +49,7 @@ const TestimonialsSection = () => {
               <div className="mt-auto pt-4 border-t border-border">
                 <p className="font-heading font-semibold text-foreground">{t.name}</p>
                 <p className="text-sm text-muted-foreground">
-                  {t.role} · {t.company}
+                  {t.role}
                 </p>
               </div>
             </div>
